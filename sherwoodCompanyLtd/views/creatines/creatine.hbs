@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+
+
+{{#if user}}
+{{!-- ref to add --}}
+<a href="../addCreatine">Add New Creatine</a>
+{{/if}}
+
+
+{{!-- table --}}
+<table>
+    <thead>
+        <th>Product</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th></th>
+    </thead>
+    <tbody>
+        {{!-- db display --}}
+
+        {{#each dataset}}
+        <tr>
+            <td>{{this.product}}</td>
+            <td>{{this.image}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.description}}</td>
+
+            {{#if ../user}}
+            <td>
+                <a href="/editCreatine/{{this._id}}" class="btn btn-primary">Edit</a>
+                <a href="../deleteCreatine/{{this._id}}" class="btn btn-danger" onclick="return confirmDelete()">Delete</a>
+            </td>
+            {{/if}}
+        </tr>
+
+        {{/each}}
+    </tbody>
+</table>
+
+
+{{!-- edit/delete --}}

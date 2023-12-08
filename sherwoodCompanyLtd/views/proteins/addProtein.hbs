@@ -1,0 +1,34 @@
+<h1>{{title}}</h1>
+
+{{!-- form --}}
+
+<form method="post">
+
+{{!-- name --}}
+    <fieldset>
+        <label for="product" class="col-2">Product: </label>
+        <input name="product" id="product" required/>
+    </fieldset>
+
+    {{!-- img --}}
+    <fieldset>
+        <label for="image" class="col-2">Image: </label>
+        <input name="image" id="image"/>
+    </fieldset>
+
+
+    {{!-- price --}}
+    <fieldset>
+        <label for="price" class="col-2">Price: </label>
+        <input name="price" id="price" required/>
+    </fieldset>
+
+    {{!-- desc --}}
+    <fieldset>
+        <label for="description" class="col-2">Description: </label>
+        <input name="description" id="description"/>
+    </fieldset>
+
+    <button class="offset-3 btn btn-primary">Save Change</button>
+
+</form>
